@@ -34,5 +34,9 @@ class NewVisitorTest(unittest.TestCase): #
         # She enters "Use peacock feathers to make a fly" (Edith is very methodical)
         self.fail('Finish the test!')
 
+        self.assertTrue(
+            any(row.text == '1: Buy peacock feathers' for row in rows), "New to-do item did not appear in table"
+            )
+
 if __name__ == '__main__': #
     unittest.main(warnings='ignore')
